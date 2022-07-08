@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="question15" method="post">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              How often do you read the implementation updates or information published on the PIP Change Hub?
+            </h1>
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="how-often-read-updates" name="how-often-read-updates" type="radio" value="Always">
+              <label class="govuk-label govuk-radios__label" for="how-often-read-updates">
+                Always
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="how-often-read-updates-2" name="how-often-read-updates" type="radio" value="Very often">
+              <label class="govuk-label govuk-radios__label" for="how-often-read-updates-2">
+                Very often
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="how-often-read-updates-3" name="how-often-read-updates" type="radio" value="Quite often">
+              <label class="govuk-label govuk-radios__label" for="how-often-read-updates-3">
+                Quite often
+              </label>
+            </div>
+          
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="how-often-read-updates-4" name="how-often-read-updates" type="radio" value="Never">
+            <label class="govuk-label govuk-radios__label" for="how-often-read-updates-4">
+              Never
+            </label>
+            </div>
+ 
+          </div>
+
+
+        
+          </fieldset>
+        </div>
+      
+
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}

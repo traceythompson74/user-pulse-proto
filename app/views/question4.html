@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        What is your office location?
+      </h1>
+    <form class="form" action="question5" method="post">
+
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="sort">
+          Select an office location
+        </label>
+        <select class="govuk-select" id="sort" name="sort">
+          <option value="Atlantic Quay">Atlantic Quay</option>
+          <option value="Birkenhead" selected>Birkenhead</option>
+          <option value="Belle Vale">Belle Vale</option>
+          <option value="Blackburn">Blackburn</option>
+          <option value="Blackpool ">Blackpool</option>
+          <option value="Bootle">Bootle</option>
+          <option value="Bradford">Bradford</option>
+          <option value="Bristol">Bristol</option>
+          <option value="Cardiff">Cardiff</option>
+          <option value="Chesterfield">Chesterfield</option>
+          <option value="Chorlton">Chorlton</option>
+          <option value="Clydebank">Clydebank</option>
+          <option value="Cwmbran">Cwmbran</option>
+          <option value="Gabalfa">Gabalfa</option>
+          <option value="Gloucester">Gloucester</option>
+          <option value="Halifax">Halifax</option>
+          <option value="Hanley">Hanley</option>
+          <option value="Leeds">Leeds</option>
+          <option value="Merthyr Tydfil">Merthyr Tydfil</option>
+          <option value="Newcastle">Newcastle</option>
+          <option value="Newport">Newport</option>
+          <option value="Northern Ireland">Northern Ireland</option>
+          <option value="Preston Guild">Preston Guild</option>
+          <option value="Preston Paletine">Preston Paletine</option>
+          <option value="Sunderland">Sunderland</option>
+          <option value="Telford ">Telford </option>
+          <option value="Washington">Washington</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+    </form>
+
+
+    <div class="govuk-grid-column-one-third">
+
+     
+    </div>
+  </div>
+{% endblock %}

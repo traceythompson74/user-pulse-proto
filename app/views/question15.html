@@ -1,0 +1,74 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="question16" method="post">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              How clear is the guidance when new features are released on PIPCS?
+            </h1>
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="how-clear-is-guidance" name="how-clear-is-guidance" type="radio" value="Very clear">
+              <label class="govuk-label govuk-radios__label" for="how-clear-is-guidance">
+                Very clear
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="how-clear-is-guidance-2" name="how-clear-is-guidance" type="radio" value="Clear">
+              <label class="govuk-label govuk-radios__label" for="how-clear-is-guidance-2">
+                Clear
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="how-clear-is-guidance-3" name="how-clear-is-guidance" type="radio" value="Unclear">
+              <label class="govuk-label govuk-radios__label" for="how-clear-is-guidance-3">
+                Unclear
+              </label>
+            </div>
+          
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="how-clear-is-guidance-4" name="how-clear-is-guidance" type="radio" value="Very unclear">
+            <label class="govuk-label govuk-radios__label" for="how-clear-is-guidance-4">
+              Very unclear
+            </label>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="how-clear-is-guidance-4" name="how-clear-is-guidance" type="radio" value="I don't read the guidance">
+              <label class="govuk-label govuk-radios__label" for="how-clear-is-guidance-4">
+                I don't read the guidance
+              </label>
+              </div>
+ 
+          </div>
+
+
+        
+          </fieldset>
+        </div>
+      
+
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}

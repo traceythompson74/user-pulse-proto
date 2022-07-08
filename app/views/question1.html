@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="question2" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                How long have you been using PIPCS?
+              </h1>
+            </legend>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="how-long-using-pipcs-1" name="how-long-using-pipcs" type="radio" value="Less than 6 months">
+                <label class="govuk-label govuk-radios__label" for="how-long-using-pipcs-1">
+                  Less than 6 months
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="how-long-using-pipcs-2" name="how-long-using-pipcs" type="radio" value="More than 6 months but less than 1 year">
+                <label class="govuk-label govuk-radios__label" for="how-long-using-pipcs-2">
+                  More than 6 months but less than 1 year
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="how-long-using-pipcs-3" name="how-long-using-pipcs" type="radio" value="More than 1 year but less than 2 years">
+                <label class="govuk-label govuk-radios__label" for="how-long-using-pipcs-3">
+                  More than 1 year but less than 2 years
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="how-long-using-pipcs-4" name="how-long-using-pipcs" type="radio" value="More than 2 years but less than 3 years
+                ">
+                <label class="govuk-label govuk-radios__label" for="how-long-using-pipcs-4">
+                  More than 2 years but less than 3 years
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="how-long-using-pipcs-5" name="how-long-using-pipcs" type="radio" value="More than 3 years
+                ">
+                <label class="govuk-label govuk-radios__label" for="how-long-using-pipcs-5">
+                  More than 3 years
+                </label>
+              </div>
+            </div>
+        
+          </fieldset>
+        </div>
+
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

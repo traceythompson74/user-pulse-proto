@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="question6" method="post">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              If you report an issue with PIPCS, do you feel that you are listened to?
+            </h1>
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="listened-to" name="listened-to" type="radio" value="Yes">
+              <label class="govuk-label govuk-radios__label" for="listened-to">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="listened-to-2" name="listened-to" type="radio" value="No" data-aria-controls="conditional-listened-to-2">
+              <label class="govuk-label govuk-radios__label" for="listened-to-2">
+                No
+              </label>
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-listened-to-2">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="why-not-listened-to">
+                  Why do you feel you are not listened to?
+                </label>
+                <textarea class="govuk-textarea" id="why-not-listened-to" name="why-not-listened-to" rows="5" ></textarea>
+              </div>
+              </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="listened-to-3" name="listened-to" type="radio" value="I don't know">
+              <label class="govuk-label govuk-radios__label" for="listened-to-3">
+                I don't know
+              </label>
+            </div>
+          </div>
+      
+        </fieldset>
+      </div>
+
+
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}
