@@ -188,6 +188,9 @@
             </a>
           </dd>
         </div>
+
+        {% if (data['incomplete-activities'] != "Never") %}
+
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             Which type of activities are you unable to complete? 
@@ -202,6 +205,9 @@
             </a>
           </dd>
         </div>
+
+        {% endif %}
+
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             How easy is it to find the information you need in PIPCS?
@@ -216,6 +222,9 @@
             </a>
           </dd>
         </div>
+
+        {% if (data['how-easy-to-find-info'] == "Very easy" or "Quite easy") %}
+
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             What type of information is difficult to find? 
@@ -230,6 +239,9 @@
             </a>
           </dd>
         </div>
+        
+        {% endif %}
+
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             How often do you read the implementation updates or information published on the PIP Change Hub?
