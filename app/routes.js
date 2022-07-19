@@ -77,10 +77,10 @@ router.post('/activitytypes', function (req, res) {
         
           // Check whether the variable matches a condition
           if (guidance == "I do not read the guidance") {
-            // Send user to AP org page
+            // Send user to CYA
             res.redirect('/check-answers')
           } else {
-            // Send user to office location page
+            // Send user to next question
             res.redirect('/question16')
           }
         
