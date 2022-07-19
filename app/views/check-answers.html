@@ -1,0 +1,296 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check your answers template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h1 class="govuk-heading-xl">Check your answers before submitting the survey</h1>
+
+
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            How long have you been using PIPCS?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            
+          {{ data['how-long-using-pipcs'] }}
+          <dd class="govuk-summary-list__actions">
+            <a href="question1.html">
+              Change
+              <span class="govuk-visually-hidden">how long you've been using PIPCS</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            What browser do you use to access PIPCS?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['what-browser'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="question2.html">
+              Change
+              <span class="govuk-visually-hidden"> what browser you use to access PIPCS</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            What is your job role?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['job-role'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="question3.html">
+              Change
+              <span class="govuk-visually-hidden"> your job role</span>
+            </a>
+          </dd>
+        </div>
+        
+        {% if (data['job-role'] != "AP Health Professional") %}
+        
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Office location
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['office-location'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="question4.html">
+              Change
+              <span class="govuk-visually-hidden"> your office location</span>
+            </a>
+          </dd>
+        </div>
+
+        {% endif %}
+
+        {% if (data['job-role'] == "AP Health Professional") %}
+        
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Which organisation do you work for?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['ap-organisation'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="question3b.html">
+              Change
+              <span class="govuk-visually-hidden"> your organisation</span>
+            </a>
+          </dd>
+        </div>
+
+        {% endif %}
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            If you report an issue with PIPCS, do you feel that you are listened to?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['listened-to'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="question5.html">
+              Change
+              <span class="govuk-visually-hidden"> whether you feel you are listened to</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            If you could change one thing about PIPCS what would it be?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['change-one=thing'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="question6.html">
+              Change
+              <span class="govuk-visually-hidden"> the one thing you would change about PIPCS</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            In the last 6 months, changes to PIPCS have:
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['changes-to-pipcs'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="question7.html">
+              Change
+              <span class="govuk-visually-hidden"> how changes in the last 6 months have affected PIPCS </span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Do the activities you carry out require workarounds?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['workarounds-required'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="question8.html">
+              Change
+              <span class="govuk-visually-hidden"> whether your activities require workarounds </span>
+            </a>
+          </dd>
+        </div>
+
+        {% if (data['workarounds-required'] != "Never") %}
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Which activities require workarounds? 
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['which-processes'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="question9.html">
+              Change
+              <span class="govuk-visually-hidden"> which activities require workarounds </span>
+            </a>
+          </dd>
+        </div>
+
+        {% endif %}
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            How often are you unable to complete an activity in PIPCS?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['incomplete-activities'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="question10.html">
+              Change
+              <span class="govuk-visually-hidden"> how often you are unable to complete an activity in PIPCS </span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Which type of activities are you unable to complete? 
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['which-activity-types'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="question11.html">
+              Change
+              <span class="govuk-visually-hidden"> which activities you are unable to complete</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            How easy is it to find the information you need in PIPCS?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['how-easy-to-find-info'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="question12.html">
+              Change
+              <span class="govuk-visually-hidden"> how easy it is to find the information you need in PIPCS </span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            What type of information is difficult to find? 
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['what-information'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="question13.html">
+              Change
+              <span class="govuk-visually-hidden"> what type of information is difficult to find </span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            How often do you read the implementation updates or information published on the PIP Change Hub?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['how-often-read-updates'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="question14.html">
+              Change
+              <span class="govuk-visually-hidden"> how often you read the implementation updates or information published on the PIP Change Hub </span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            How clear is the guidance when new features are released on PIPCS?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['how-clear-is-guidance'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="question15.html">
+              Change
+              <span class="govuk-visually-hidden"> how clear the guidance is when new features are released on PIPCS </span>
+            </a>
+          </dd>
+        </div>
+
+        {% if (data['how-clear-is-guidance'] != "I do not read the guidance") %}
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Are you given enough time to read and understand guidance before new features or processes go live?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['enough-time-for-guidance'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="question16.html">
+              Change
+              <span class="govuk-visually-hidden"> whether you are given enough time to read and understand guidance before new features or processes go live </span>
+            </a>
+          </dd>
+        </div>
+        {% endif %}
+      </dl>
+
+
+
+
+      <form action="/confirmation" method="post" novalidate>
+
+        <input type="hidden" name="answers-checked" value="true">
+
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Submit answers
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

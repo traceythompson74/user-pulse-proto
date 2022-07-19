@@ -69,5 +69,22 @@ router.post('/activitytypes', function (req, res) {
     
     })
 
+        // Run this code when a form is submitted to 'guidance'
+        router.post('/guidance', function (req, res) {
+
+          // Make a variable and give it the value from 'question12'
+          var guidance = req.session.data['how-clear-is-guidance']
+        
+          // Check whether the variable matches a condition
+          if (guidance == "I do not read the guidance") {
+            // Send user to AP org page
+            res.redirect('/check-answers')
+          } else {
+            // Send user to office location page
+            res.redirect('/question16')
+          }
+        
+        })
+
 
 module.exports = router
