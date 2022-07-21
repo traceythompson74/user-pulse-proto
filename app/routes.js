@@ -86,5 +86,22 @@ router.post('/activitytypes', function (req, res) {
         
         })
 
+         // Run this code when a form is submitted to 'officelocation'
+            router.post('/officelocation', function (req, res) {
+
+            // Make a variable and give it the value from 'question4'
+            var officelocation = req.session.data['office-location']
+                
+            // Check whether the variable matches a condition
+             if (officelocation == "Other") {
+            // Send user to question 4b
+            res.redirect('/question4b')
+            } else {
+              // Send user to next question
+              res.redirect('/question5')
+            }
+                
+         })
+
 
 module.exports = router

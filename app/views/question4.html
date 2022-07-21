@@ -17,7 +17,7 @@ Question page template – {{ serviceName }} – GOV.UK Prototype Kit
       <h1 class="govuk-heading-xl">
         What is your office location?
       </h1>
-    <form class="form" action="question5" method="post">
+    <form class="form" action="officelocation" method="post">
 
 
       <div class="govuk-form-group">
@@ -55,6 +55,15 @@ Question page template – {{ serviceName }} – GOV.UK Prototype Kit
           <option value="Other">Other</option>
         </select>
       </div>
+
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="office-location">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="other-details">
+            Give details
+          </label>
+          <textarea class="govuk-textarea" id="other-details" name="other-details" rows="5" >{{ data['other-details'] }}</textarea>
+        </div>
+        </div>
 
       <button class="govuk-button" data-module="govuk-button">Continue</button>
 

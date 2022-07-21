@@ -112,6 +112,26 @@
             </a>
           </dd>
         </div>
+
+        {% if (data['listened-to'] == "No") %}
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Why do you not feel listened to?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['why-not-listened-to'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="question5.html">
+              Change
+              <span class="govuk-visually-hidden"> why you do not feel listened to</span>
+            </a>
+          </dd>
+        </div>
+
+        {% endif %}
+
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             If you could change one thing about PIPCS what would it be?
